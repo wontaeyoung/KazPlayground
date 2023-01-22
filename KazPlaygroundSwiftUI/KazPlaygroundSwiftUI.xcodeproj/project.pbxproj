@@ -29,6 +29,8 @@
 		6EC9447D297BDF2700BADDD9 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC9447C297BDF2600BADDD9 /* DesignSystem.swift */; };
 		6EC94481297C038200BADDD9 /* DesignSystemMentoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC94480297C038200BADDD9 /* DesignSystemMentoring.swift */; };
 		6ED6A514297D982700308B68 /* AuthLoginRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED6A513297D982700308B68 /* AuthLoginRegister.swift */; };
+		6EC9447D297BDF2700BADDD9 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC9447C297BDF2600BADDD9 /* DesignSystem.swift */; };
+		6EC94481297C038200BADDD9 /* DesignSystemMentoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC94480297C038200BADDD9 /* DesignSystemMentoring.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		6EC9447C297BDF2600BADDD9 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		6EC94480297C038200BADDD9 /* DesignSystemMentoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemMentoring.swift; sourceTree = "<group>"; };
 		6ED6A513297D982700308B68 /* AuthLoginRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLoginRegister.swift; sourceTree = "<group>"; };
+		6EC9447C297BDF2600BADDD9 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		6EC94480297C038200BADDD9 /* DesignSystemMentoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemMentoring.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +245,10 @@
 				6E12822A2979AFF600DC938B /* CollectionGroup.swift in Sources */,
 				6E7CA54F2980257B0017568C /* ChatCellViewModel.swift in Sources */,
 				6E7CA54D298022700017568C /* ChatViewModel.swift in Sources */,
+				6EC9447D297BDF2700BADDD9 /* DesignSystem.swift in Sources */,
+				6E1281FF29798F5900DC938B /* ContentView.swift in Sources */,
+				6E1281FD29798F5900DC938B /* KazPlaygroundSwiftUIApp.swift in Sources */,
+				6E12822A2979AFF600DC938B /* CollectionGroup.swift in Sources */,
 				6EC94481297C038200BADDD9 /* DesignSystemMentoring.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
