@@ -1,13 +1,64 @@
 //
-//  StoreViewModel.swift
+//  CollectionGroup.swift
 //  KazPlaygroundSwiftUI
 //
 //  Created by 원태영 on 2023/01/20.
 //
 
-import Foundation
+import SwiftUI
 import FirebaseFirestore
 
+struct ReviewView: View {
+    @StateObject var storeVM : StoreViewModel = StoreViewModel()
+    
+    var body: some View {
+        VStack {
+            Button {
+                Task {
+                    storeVM.requestData(userID: "dduri")
+                }
+            } label: {
+                Text("패치하기")
+            }
+            
+            List {
+                ForEach(storeVM.reviews) { review in
+                    Text(review.content)
+                }
+            }
+            
+        }
+    }
+}
+
+struct ReviewView_Previews: PreviewProvider {
+    static var previews: some View {
+        ReviewView()
+    }
+}
+
+// MARK: -Models
+struct Store : Identifiable {
+    let id : String = UUID().uuidString
+    let name : String
+}
+
+struct Item : Identifiable {
+    let id : String = UUID().uuidString
+    let storeID : String
+    let name : String
+    let price : Int
+}
+
+
+struct Review : Identifiable {
+    let id : String
+    let storeID : String
+    let userID : String
+    let content : String
+}
+
+// MARK: -ViewModel
 class StoreViewModel: ObservableObject {
     @Published var stores: [Store]
     @Published var items: [Item]
@@ -92,4 +143,3 @@ class StoreViewModel: ObservableObject {
     }
      */
 }
-
