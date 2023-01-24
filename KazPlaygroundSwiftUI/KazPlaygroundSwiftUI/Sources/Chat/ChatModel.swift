@@ -7,6 +7,8 @@
 
 import Foundation
 
+let userUID : String = ""
+
 struct Chat : Identifiable {
     let id : String // 채팅방 ID
     let date : Double // 생성 날짜
