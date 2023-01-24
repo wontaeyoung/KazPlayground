@@ -9,9 +9,7 @@ import Foundation
 
 struct Chat : Identifiable {
     let id : String // 채팅방 ID
-    let boardID : String // 게시판 ID
-    let userIDList : [String] // 참여중인 유저 ID 리스트 -> 채팅방 리스트에서 셀에 상대 이름 표시를 위해 필요
-    let date : Double // 날짜 <- Double로 변경 필요
+    let date : Double // 생성 날짜
     let lastContent : String // 마지막 메세지 내용
     
     var stringDate : String {
