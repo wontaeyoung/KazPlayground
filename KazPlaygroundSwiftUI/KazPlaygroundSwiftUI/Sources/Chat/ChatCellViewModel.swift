@@ -38,4 +38,36 @@ class ChatCellStore : ObservableObject {
                 
             }
     }
+    
+    // MARK: - ChatCell CRUD
+    func addChatCell(_ chatCell: ChatCell, _ chatID: String) {
+        
+        database.collection("Chats").document(chatID).collection("ChatCells")
+            .document(chatCell.id)
+            .setData(["id" : chatCell.id,
+                      "userID" : chatCell.userID,
+                      "content" : chatCell.content,
+                      "date" : chatCell.date])
+        
+        fetchChatCells(chatID: chatID)
+    }
+    
+    func updateChatCell(_ chatCell: ChatCell, _ chatID: String) {
+        database.collection("Chats").document(chatID).collection("ChatCells")
+            .document(chatCell.id)
+            .updateData(["id" : chatCell.id,
+                         "userID" : chatCell.userID,
+                         "content" : chatCell.content,
+                         "date" : chatCell.date])
+        
+        fetchChatCells(chatID: chatID)
+    }
+    
+    func removeChatCell(_ chatCell: ChatCell, _ chatID: String) {
+        database.collection("Chats").document(chatID).collection("ChatCells")
+            .document(chatCell.id)
+            .delete()
+        
+        fetchChatCells(chatID: chatID)
+    }
 }
